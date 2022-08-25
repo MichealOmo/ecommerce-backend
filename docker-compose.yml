@@ -26,13 +26,13 @@ services:
   web:
     build: .
     container_name: ecommerce-backend
-    command: ["./wait-for-it.sh", "db:5432", "--", "python", "manage.py", "runserver", "0.0.0.0:8000"]
+    command: ["./wait-for-it.sh", "db:5432", "--", "python", "manage.py", "runserver", "0.0.0.0:6000"]
     environment:
       - "DJANGO_SETTINGS_MODULE=src.settings.local-docker"
     volumes:
       - .:/usr/src/app
     ports:
-      - "8000:8000"
+      - "6000:6000"
     depends_on:
       - db
       - migration
