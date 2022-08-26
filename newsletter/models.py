@@ -3,7 +3,7 @@ from django.db import models
 
 # Create your models here.
 class Subscriber(models.Model):
-    id = models.AutoField(primary_key=True)
+    # id = models.AutoField(primary_key=True)
     email = models.EmailField(unique=True)
     joined_date = models.DateTimeField(auto_now_add=True)
 

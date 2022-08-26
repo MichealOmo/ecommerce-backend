@@ -42,7 +42,7 @@ class CustomUserManager(BaseUserManager):
 
 class CustomUser(AbstractUser):
     username = None
-    id = models.AutoField(primary_key=True)
+    # id = models.AutoField(primary_key=True)
     first_name = models.CharField(max_length=255, verbose_name="First name")
     last_name = models.CharField(max_length=255, verbose_name="Last name")
     email = models.EmailField(unique=True)

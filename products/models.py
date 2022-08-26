@@ -23,7 +23,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    id = models.AutoField(primary_key=True)
+    # id = models.AutoField(primary_key=True)
     category = models.ManyToManyField(Category, blank=False)
     tags = TaggableManager(blank=True)  # tags mechanism
     name = models.CharField(max_length=150)
