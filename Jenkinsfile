@@ -11,7 +11,7 @@ pipeline {
     stage("remove-old") {
       steps {
         sh """
-          docker-compose stop ecommerce-backend || true
+          docker-compose stop || true
         """
       }
     }
